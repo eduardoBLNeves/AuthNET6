@@ -1,0 +1,23 @@
+﻿@model AuthNET6.Models.User;
+
+@if (!string.IsNullOrEmpty(ViewBag.Erro))
+{
+    <h4 style="color:red;font-weight:600;">
+        @ViewBag.Erro.ToString()
+    </h4>
+}
+
+
+
+@using(Html.BeginForm("Login", "Home", FormMethod.Post, new { autocomplete="off" })){
+    <label>Nick:</label> 
+    @Html.TextBoxFor(x=>x.nickname) <br />
+
+    <label>Senha:</label> 
+    @Html.TextBoxFor(x=>x.password) <br />
+
+    <label>Cargo:</label> 
+    @Html.TextBoxFor(x=>x.cargo) <br />
+
+    <button type="submit">Enviar</button>
+}

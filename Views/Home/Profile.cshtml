@@ -1,0 +1,9 @@
+﻿<h1>Profile</h1>
+
+
+@Html.ActionLink("Fazer Logoff","Sair","Home")
+
+@foreach(var perm in ViewBag.Permissoes)
+{
+    <p>Cargo: <u>@perm</u></p> <br />
+}
